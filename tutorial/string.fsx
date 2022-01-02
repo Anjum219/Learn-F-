@@ -23,3 +23,10 @@ printfn $"{collectString str2}"
 let strings = [ "Tutorials Point"; "Coding Ground"; "Absolute Classes" ]
 let ourProducts = String.concat "\n" strings
 printfn "%s" ourProducts
+
+// iterate
+let str3 = "Fly high"
+printfn "Iterate: %c" str3.[0] // NOTICE HOW A DOT IS USED BEFORE THE [
+
+// substring
+printfn "Substring: %s" str3.[4..(String.length str3)]
