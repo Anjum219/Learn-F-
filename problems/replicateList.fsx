@@ -1,13 +1,10 @@
 open System
 
-let replicateItem item n = 
-    [for i in 1 .. n do yield item]
-
-let rec replicateList (lst: list<int>) (newLst: list<int>) (index: int) (n: int) =
-    if index = lst.Length then
-        newLst
-    else
-        replicateList lst (List.append newLst (replicateItem lst.[index] n)) (index+1) n
+let replicateList (lst: list<int>) (n: int): list<int> =
+    [for i = 0 to (lst.Length-1) do
+        for j = 1 to n do
+            yield lst.[i]
+    ]
 
 
 let S = Console.ReadLine() |> int
@@ -18,6 +15,6 @@ let lst = [
         X <- Console.ReadLine()
 ]
 
-let repLst = replicateList lst [] 0 S
+let repLst = replicateList lst S
 for item in repLst do
     printfn "%d" item
