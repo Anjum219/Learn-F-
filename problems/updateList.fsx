@@ -1,4 +1,6 @@
-let f (arr: list<int>): list<int> = [for i = 0 to arr.Length-1 do yield (abs arr.[i])] // Complete this function
+let f arr =
+    arr
+    |> List.map (fun x -> abs x)
 
 //----------------DON'T MODIFY---------------
 

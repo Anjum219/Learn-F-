@@ -2,16 +2,21 @@
 
 open System
 
-let rev (lst: list<int>) (n: int): list<int> =
-    [for i = n downto 0 do yield lst.[i]]
+let ReadUntilEOF: seq<string> =
+    fun _ -> Console.ReadLine()
+    |> Seq.initInfinite
+    |> Seq.takeWhile (fun x -> x <> null)
 
-let lst = [
-    let mutable X = Console.ReadLine()
-    while not (X = null) do
-        yield X |> int
-        X <- Console.ReadLine()
-]
+let rec rev (head: int) (tail: list<int>) (lst: list<int>): list<int> =
+    if tail.Length = 0 then
+        (([head], lst) ||> List.append)
+    else
+        rev tail.Head tail.Tail (([head], lst) ||> List.append)
 
-let revList = rev lst (lst.Length-1)
-for i = 0 to (lst.Length-1) do
-    printfn "%d" revList.[i]
+let lst = 
+    ReadUntilEOF
+    |> Seq.map(fun x -> int x)
+    |> Seq.toList
+
+rev lst.Head lst.Tail []
+|> List.iter (fun x -> printfn "%d" x)
