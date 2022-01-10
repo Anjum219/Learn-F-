@@ -1,7 +1,8 @@
 open System
 
 let f n = //Complete this function
-    [for i = 1 to n do yield 0]
+    seq { 1 .. n }
+    |> Seq.toList
 
 let main() =
     let input = Console.ReadLine()

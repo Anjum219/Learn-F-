@@ -17,7 +17,10 @@ let rec isColor seq i r g y b =
 
 let T = Console.ReadLine() |> int
 
-for i = 1 to T do
+let ReadAndPrint _ = 
     let seq = Console.ReadLine()
     let ans = isColor seq 0 0 0 0 0
     printfn "%s" ans
+
+seq { 1 .. T }
+    |> Seq.iter (fun _ -> ReadAndPrint())
