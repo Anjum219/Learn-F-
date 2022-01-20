@@ -3,7 +3,7 @@ Here are a few problems that you can solve to practice your functional skill. Go
 
 1. [Array of N Elements](https://www.hackerrank.com/challenges/fp-array-of-n-elements) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/arrayN.fsx)__
 2. [Evaluating e^x](https://www.hackerrank.com/challenges/eval-ex/problem) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/evaluatingex.fsx)__
-3. [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/fibonacci.fsx)__
+3. [Fibonacci number](https://www.hackerrank.com/challenges/fibonacci-fp/problem) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/fibonacci.fsx)__
 4. [Filter Array](https://www.hackerrank.com/challenges/fp-filter-array) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/filterArray.fsx)__
 5. [Filter Positions in a List](https://www.hackerrank.com/challenges/fp-filter-positions-in-a-list) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/filterPositions.fsx)__
 6. [List Length](https://www.hackerrank.com/challenges/fp-list-length/problem) __[view solution in F#](https://github.com/Anjum219/Learn-F-Sharp/blob/main/problems/countLength.fsx)__
