@@ -25,3 +25,11 @@ printfn "List average: %A" (lst |> List.map (fun x -> float x) |> List.average)
 // *** fold
 printfn "Folded list: %A" (lst |> List.fold (fun x y -> x + y) 0)
 printfn "Folded list from back: %A" (0 |> List.foldBack (fun x y -> x + y) lst)
+
+// iterate
+let rec iterate (lst: list<int>): unit =
+       match lst with
+       | [ ] -> return
+       | head :: tail ->
+             printfn "%d" head
+             iterate tail
