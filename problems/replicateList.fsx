@@ -5,18 +5,10 @@ let ReadUntilEOF: seq<string> =
     |> Seq.initInfinite
     |> Seq.takeWhile (fun x -> x <> null)
 
-let rec makeListWithSameElement (lst: list<int>) (element: int) (n: int): list<int> =
-    if n = 0 then
-        lst
-    else
-        makeListWithSameElement ([element]@lst) element (n-1)
-
-let rec replicateList (lst: list<int>) (n: int) (i: int) (newList: list<int>): list<int> =
-    if i = lst.Length then
-        newList
-    else
-        let tmp = ([], lst.[i], n) |||> makeListWithSameElement
-        replicateList lst n (i+1) (newList@tmp)
+let rec replicateList (lst: list<int>) (n: int): list<int>=
+    lst
+    |> List.map (fun x -> List.init n (fun _ -> x))
+    |> List.concat
 
 let S = Console.ReadLine() |> int
 let lst = 
@@ -24,5 +16,5 @@ let lst =
     |> Seq.map(fun x -> int x)
     |> Seq.toList
     
-replicateList lst S 0 []
+replicateList lst S
 |> List.iter (fun x -> printfn "%d" x)
